@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🚨 تحذير أمني 🚨</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20%;
+        }
+    </style>
+    <script>
+        function startPrank() {
+            // 🔥 تشغيل صوت مرعب
+            var audio = new Audio("https://www.fesliyanstudios.com/play-mp3/4383"); 
+            audio.loop = true;
+            audio.play();
+            
+            // 💀 إظهار تحذيرات متكررة
+            setInterval(function() {
+                alert("🚨 تحذير خطير! هاتفك مخترق 🚨\n\nبياناتك في خطر 😈");
+            }, 5000);
+
+            // 🔒 قفل الشاشة مؤقتًا
+            let lockTime = 10; // 10 ثواني
+            let interval = setInterval(function() {
+                document.body.innerHTML = "<h1>جهازك مغلق لـ " + lockTime + " ثانية! 😨</h1>";
+                lockTime--;
+                if (lockTime < 0) {
+                    clearInterval(interval);
+                    document.body.innerHTML = "<h1>😂 لقد كانت مزحة! لا تقلق</h1>";
+                }
+            }, 1000);
+        }
+    </script>
+</head>
+<body onload="startPrank()">
+    <h1>⚠️ تحذير أمني ⚠️</h1>
+    <p>تم اكتشاف نشاط غير عادي على جهازك!</p>
+    <p>📡 يتم الآن تحميل جميع بياناتك...</p>
+</body>
+</html>
